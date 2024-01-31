@@ -1,0 +1,136 @@
+/* style Products componet*/
+*{
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.products-list{
+  background-color: #08090D;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+  justify-content: center;
+  align-items: center;
+}
+.product-item{
+  width: clamp(150px , 100% , 300px);
+  height: 320px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #1A1E26;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  img{
+    width: 260px;
+    height: 180px;
+    border-radius: 5px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+  }
+  .product-item_header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    text-align: center;
+    strong{
+      font-size: 20px;
+      color: #A1A69C;
+    }
+  }
+  .product-item_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button{
+      height: 30px;
+      width: 50%;
+      background-color: #343A40;
+      color: #A1A69C;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+    button:hover{
+      background-color: #A1A69C;
+      color: #08090D;
+    }
+  }
+}
+.filters{
+  background-color:#343A40;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  width: 600px;
+  div{
+    display: flex;
+    gap:20px;
+    font-weight: 700;
+    color: #A1A69C;
+  }
+}
+.header{
+  background-color: #343A40;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 110px;
+  align-items: center;
+  font-weight: 700;
+  color: #A1A69C;
+}
+.debuger{
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: #08090dda;
+  color: #A1A69C;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.cart{
+  position:absolute;
+  background-color:#A1A69C;
+  width: 300px;
+  padding: 30px;
+  display: none;
+  top: 0px;
+  right: 0px;
+  img{
+    width: 100px;
+    height: 100px;
+  }
+  ul{
+    background-color: #1A1E26;
+    padding: 20px;
+    color: #A1A69C;
+  }
+}
+.cart-button{
+  position: absolute;
+  display: grid;
+  place-items: center;
+
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: #08090D;
+  color: #A1A69C;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+}
+.cart-button ~ input:checked ~ .cart {
+  height: 100%;
+  display: block;
+}
